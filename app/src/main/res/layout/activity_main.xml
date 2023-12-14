@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/txtHeading"
+        android:text="DETAILS"
+        android:gravity="center"
+        android:layout_above="@id/etvName"/>
+
+    <EditText
+        android:id="@+id/etvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:imeOptions="actionNext"
+        android:minHeight="50dp"
+        android:layout_centerInParent="true"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/etvRollNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etvName"
+        android:gravity="center"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:hint="Roll No"
+        android:minHeight="50dp" />
+
+    <Button
+        android:id="@+id/btnAddRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:layout_below="@id/etvRollNo"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/txtNoData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAddRecord"
+        android:gravity="center"
+        android:hint="No Data Available"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnAddRecord"/>
+</RelativeLayout>
